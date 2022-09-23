@@ -1,9 +1,8 @@
 
-
 const Sequelize = require('sequelize');
 
-// Option 1: Passing parameters separately
-const sequelize = new Sequelize('hoidanit', 'root', null, {
+// Option 3: Passing parameters separately (other dialects)
+const sequelize = new Sequelize('bookingcare', 'root', 'password', {
     host: 'localhost',
     dialect: 'mysql',
     logging: false
@@ -13,9 +12,9 @@ let connectDB = async () => {
     try {
         await sequelize.authenticate();
         console.log('Connection has been established successfully.');
-    } catch (error) {
+      } catch (error) {
         console.error('Unable to connect to the database:', error);
-    }
+      }
 }
 
 module.exports = connectDB;

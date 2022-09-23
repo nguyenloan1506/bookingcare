@@ -40,6 +40,7 @@ class Login extends Component {
         this.setState({
             errMessage: ''
         })
+        
         try {
 
             let data = await handleLoginApi(this.state.username, this.state.password);
